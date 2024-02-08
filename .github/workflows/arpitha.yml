@@ -19,3 +19,12 @@ jobs:
                 docker image build -t arpithak06/dataphion:tagname .
                 docker push arpithak06/dataphion:tagname
 
+
+
+            - name: run ansible playbook
+              if: github.ref == 'refs/heads/master'
+              env:
+                password: ${{ secrets.DOCKER_PASSWORD }}
+              run: |
+                ansible-playbook ansible.yml -i mummy.txt --extra-vars "password=$password"    
+
