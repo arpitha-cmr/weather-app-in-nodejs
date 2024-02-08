@@ -13,4 +13,4 @@
       shell: docker pull arpithak06/dataphion:tagname
 
     - name: docker run
-      shell: docker run --init -d arpithak06/dataphion:tagname
+      shell: docker run --init -d arpithak06/dataphion:tagname 
