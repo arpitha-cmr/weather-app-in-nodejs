@@ -9,7 +9,7 @@ jobs:
         
         steps:
             - run: node --version
-            - run: npm --version
+            - run:   npm --version
             - uses: actions/checkout@v4
             
             
